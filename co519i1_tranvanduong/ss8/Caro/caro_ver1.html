@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    button{
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+<script>
+    let turn = 1;
+    let a = "<table style='width: 500px;height: 500px;position: absolute' border='1'>"
+    for(let i= 1;i<10;i++){
+        a += "<tr id = 'demo'>"
+        for(let j=1;j<10;j++){
+            a = a +'<td ><button id = "cell-'+i+'-'+j+ '"'+ ' onclick = "cellClick('+i+','+j+')">' + "</button></td>";
+        }
+        a += "</tr>"
+    }
+    document.write(a);
+
+    function cellClick(x,y) {
+        let cell = document.getElementById("cell-"+x+'-'+y);//tro den cell
+        if(cell.innerHTML === "") {
+            if (turn === 1) {
+                cell.innerHTML = "X";
+                turn = 2;
+            } else {
+                cell.innerHTML = "O";
+                turn = 1;
+            }
+        }
+    }
+    function check() {
+        
+
+</script>
+</body>
+</html>
