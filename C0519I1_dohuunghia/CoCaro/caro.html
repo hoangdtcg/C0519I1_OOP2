@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trò chơi cờ caro</title>
+
+
+    <link rel="stylesheet" href="caro.css">
+    <script src="caro.js"></script>
+</head>
+<body>
+<div>
+    <h1>Trò chơi cờ caro</h1>
+    <input type="button" value="Chơi lại" id= "reset">
+</div>
+
+<p>
+    (*) Luật chơi:<br>
+    - 5 con cùng chất (x hoặc o) liên tiếp là thắng<br>
+</p>
+
+<table id="table" cellspacing="0">
+
+</table>
+
+
+
+<script>
+    document.getElementById('reset').addEventListener('click', function reset() {
+        makeTable();
+        select();
+        isWon = false;
+    });
+</script>
+</body>
+</html>
