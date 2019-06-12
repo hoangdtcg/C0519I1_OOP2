@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="ElectricLamp.js"></script>
+    <script src="SwitchLamp.js"></script>
+</head>
+<body>
+    <input type="button" value="Turn On" onclick="turnOn()">
+    <input type="button" value="Turn Off" onclick="turnOff()">
+
+    <div class="Electriclamp">
+        <img src="https://d14nx13ylsx7x8.cloudfront.net/lesson_image_blocks/assets/000/001/412/original/pic_bulboff.gif" alt="">
+    </div>
+                        <script>
+                            let lamp = new ElectricLamp();
+                            let switchbutton = new SwitchLamp(lamp);
+                            function turnOn() {
+                                switchbutton.switchOn();
+                                switchbutton.connectTolamp()
+                            }
+                            function turnOff() {
+                                switchbutton.switchOff();
+                                switchbutton.connectTolamp()
+                            }
+                        </script>
+</body>
+</html>
